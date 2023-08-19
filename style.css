@@ -1,0 +1,141 @@
+/* Import Roboto Mono font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
+/* Define global variables */
+:root {
+    --body-bg-color: #445760;        /* Green color for the website's background*/
+    --calc-bg-color: #cbcbcb;        /* Light gray for the calculator's background */
+    --calc-screen-bg-color: #FFFFFF; /* Pure white for the calculator screen background */
+    --calc-primary-color: #2D2D2D;   /* Dark gray for text and primary elements */
+    --calc-secondary-color: #7D7D7D; /* Medium gray for secondary text or elements */
+    --calc-btn-color: #E5E5E5;       /* Light gray for the button's background */
+    --calc-btn-hover: #C5C5C5;       /* Slightly darker gray for the button's hover state */
+    --calc-accent-color: #FF4500;    /* Accent color for operations or important buttons */
+}
+
+/* Base document settings */
+html {
+    font-size: 16px;
+}
+
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+/* Visually hide elements (for accessibility) */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+
+/* Base body styling */
+body {
+    font-family: 'Roboto Mono', 'Courier New', Courier, monospace;
+    background-color: var(--body-bg-color);
+}
+/* Center the content */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Calculator div */
+.calculator {
+    background-color: var(--calc-bg-color);
+    color: var(--calc-primary-color);
+    width: clamp(10rem, 100%, 15rem);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0.5rem;
+    border-radius: 0.1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Calculator screen */
+.calc-screen {
+    background-color: var(--calc-screen-bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+    padding: 0.5rem;
+}
+
+/* Calculator screen top box */
+.calc-screen .screen-top {
+    font-size: 0.8rem;
+    color: var(--calc-secondary-color);
+}
+/* Calculator screen bottom box */
+.calc-screen .screen-bottom {
+    font-weight: bold;
+    color: var(--calc-accent-color);
+}
+
+
+/* Calculator buttons box */
+.calc-btns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.1rem;
+}
+
+/* Calculator button */
+.calc-btns .btn {
+    background-color: var(--calc-btn-color);
+    padding: 1rem;
+    border: none;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Calculator button hover */
+.calc-btns .btn:hover {
+    background-color: var(--calc-btn-hover);
+}
+
+/* Calculator button active state */
+.calc-btns .btn:active {
+    background-color: var(--calc-secondary-color);  
+}
+
+/* Calculator button focus state */
+.calc-btns .btn:focus {
+    box-shadow: 0 0 0 0.03rem var(--calc-secondary-color); 
+}
+
+/* Utility and operation buttons */
+.btn-utility, .btn-operation {
+    font-weight: bold;
+    color: var(--calc-secondary-color);
+}
+
+/* Calculator utility buttons (backspace, clear)*/
+.btn-utility[data-function="backspace"],
+.btn-utility[data-function="clear"] {
+    grid-column: span 2;
+}
+
+/* Calculator equals button */
+.btn-operation[data-operation="equals"] {
+    color: var(--calc-accent-color);
+}
+
+
+
+
+
