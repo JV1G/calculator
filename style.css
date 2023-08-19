@@ -80,11 +80,13 @@ main {
 .calc-screen .screen-top {
     font-size: 0.8rem;
     color: var(--calc-secondary-color);
+    min-height: 1.3rem; 
 }
 /* Calculator screen bottom box */
 .calc-screen .screen-bottom {
     font-weight: bold;
     color: var(--calc-accent-color);
+    min-height: 1.3rem;
 }
 
 
