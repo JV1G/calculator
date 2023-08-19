@@ -1,0 +1,52 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <main>
+        <!--Heading for Accessibility (visually hidden)-->
+        <h1 class="visually-hidden">Calculator</h1>
+
+        <!--Calculator-->
+        <div class="calculator">
+            <!--Screen-->
+            <div class="calc-screen">
+                <div class="screen-top">1+2</div>
+                <div class="screen-bottom">3</div>
+            </div>
+            <!--Buttons-->
+            <div class="calc-btns">
+                <!--Utility buttons-->
+                <button class="btn btn-utility" data-function="backspace">Backspace</button>
+                <button class="btn btn-utility" data-function="clear">Clear</button>
+
+                <!--Row 1: Numbers and Divide operation-->
+                <button class="btn btn-number" data-value="7">7</button>
+                <button class="btn btn-number" data-value="8">8</button>
+                <button class="btn btn-number" data-value="9">9</button>
+                <button class="btn btn-operation" data-operation="divide" aria-label="divide">&divide;</button>
+                
+                <!--Row 2: Numbers and Multiply operation-->
+                <button class="btn btn-number" data-value="4">4</button>
+                <button class="btn btn-number" data-value="5">5</button>
+                <button class="btn btn-number" data-value="6">6</button>
+                <button class="btn btn-operation" data-operation="multiply" aria-label="multiply">&times;</button>
+                
+                <!--Row 3: Numbers and Subtract operation-->
+                <button class="btn btn-number" data-value="1">1</button>
+                <button class="btn btn-number" data-value="2">2</button>
+                <button class="btn btn-number" data-value="3">3</button>
+                <button class="btn btn-operation" data-operation="subtract" aria-label="subtract">-</button>
+                
+                <!--Row 4: Zero, Decimal, Equal, and Add operations-->
+                <button class="btn btn-number" data-value="0">0</button>
+                <button class="btn btn-number" data-value=".">.</button>
+                <button class="btn btn-operation" data-operation="equals" aria-label="equals">=</button>
+                <button class="btn btn-operation" data-operation="add" aria-label="add">+</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
